@@ -1,0 +1,142 @@
+﻿<Window x:Class="Style_yozish.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Style_yozish"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="CanResizeWithGrip"
+        Title="MainWindow" Height="350" Width="600">
+
+    <Window.Resources>
+        <ResourceDictionary Source="Controls.xaml" />
+
+    </Window.Resources>
+    
+    <Border Background="Snow" CornerRadius="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Border x:Name="DragPanel" MouseDown="DragPanel_MouseDown" Grid.Row="0" 
+                    Background="#DFDDDF" CornerRadius="10 10 0 0">
+                <Grid>
+                    <DockPanel>
+                        <Border x:Name="ExitBtn" CornerRadius="10" Cursor="Hand" 
+                             Height="15" Width="15" Background="#F96160" Margin="10"
+                             MouseLeftButtonDown="ExitBtn_MouseLeftButtonDown"/>
+                        <Border x:Name="SizeBtn" CornerRadius="10" Cursor="Hand" 
+                             Height="15" Width="15" Background="#FBBB4D" Margin="10"
+                             MouseLeftButtonDown="SizeBtn_MouseLeftButtonDown"/>
+                        <Border x:Name="HediBtn" CornerRadius="10" Cursor="Hand" 
+                             Height="15" Width="15" Background="#D1D1D1" Margin="10" 
+                             HorizontalAlignment="Left"
+                             MouseLeftButtonDown="HediBtn_MouseLeftButtonDown"/>
+                    </DockPanel>
+
+                    <DockPanel HorizontalAlignment="Center" Margin="0 10 0 10">
+                        <Border Width="80" Style="{StaticResource BtnStyle}" >
+                            <TextBlock Text="Overview" HorizontalAlignment="Center"
+                                       VerticalAlignment="Center" />
+                        </Border>
+
+                        <Border Width="80" Style="{StaticResource BtnStyle}" >
+                            <TextBlock Text="Displays" HorizontalAlignment="Center"
+                                       VerticalAlignment="Center" />
+                        </Border>
+
+                        <Border Width="80" Style="{StaticResource BtnStyle}" >
+                            <TextBlock Text="Storage" HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                        </Border>
+
+                        <Border Width="80" Style="{StaticResource BtnStyle}" >
+                            <TextBlock Text="Support" HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                        </Border>
+
+                        <Border Width="80" Style="{StaticResource BtnStyle}" >
+                            <TextBlock Text="Service" HorizontalAlignment="Center"
+                                       VerticalAlignment="Center" />
+                        </Border>
+
+                    </DockPanel>
+                </Grid>
+            </Border>
+            <Border Grid.Row="1" Background="#F6F6F6" CornerRadius="10">
+                <Grid>
+                    <Grid Height="250" Width="450">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Ellipse Grid.Column="0" Height="150" Width="150" Stroke="#DBDBDB" StrokeThickness="7">
+                            <Ellipse.Fill>
+                                <ImageBrush ImageSource="D:\2 C#\Muhammadkarim Aka C# .Net\WPF\DragController\DragController\Image\tog.jpg"
+                                        Stretch="Fill" />
+                            </Ellipse.Fill>
+                        </Ellipse>
+                        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                            <TextBlock FontSize="25" Foreground="#2D2D30">
+                            <Run Text="masOS" FontWeight="Bold"/>
+                            <Run Text="Sierra"/>
+                            </TextBlock>
+
+                            <TextBlock  Margin="0 10 0 0">
+                            <Run Text="MacBook" FontWeight="Bold"/>
+                            <Run Text="Pro(Retina,Early 2015" />
+                            </TextBlock>
+
+                            <TextBlock  Margin="0 5 0 0">
+                             <Run Text="Processor" FontWeight="Bold"/>
+                             <Run Text="2.7 Ghz Intel Core i5" />
+                            </TextBlock>
+
+                            <TextBlock  Margin="0 5 0 0">
+                              <Run Text="Memory" FontWeight="Bold"/>
+                              <Run Text="8 GB 2000 MHz DDR3" />
+                            </TextBlock>
+
+                            <TextBlock  Margin="0 5 0 0">
+                              <Run Text="Startup" FontWeight="Bold"/>
+                              <Run Text="Disk Macintosh HD" />
+                            </TextBlock>
+
+                            <TextBlock  Margin="0 5 0 0">
+                              <Run Text="Graphics" FontWeight="Bold"/>
+                              <Run Text="Intel Iris Graphics 6100 1536 MB" />
+                            </TextBlock>
+
+                            <TextBlock  Margin="0 5 0 0">
+                              <Run Text="Serial Number" FontWeight="Bold"/>
+                              <Run Text="C02R13C8FVH9" />
+                            </TextBlock>
+
+                            <DockPanel Margin="0 30 0 0">
+                                <Border Style="{StaticResource BtnStyle}">
+                                    <TextBlock Text="System Report..." HorizontalAlignment="Center"
+                                      VerticalAlignment="Center" />
+                                </Border>
+
+                                <Border Width="110" Style="{StaticResource BtnStyle}">
+                                    <TextBlock Text="Software Update..." HorizontalAlignment="Center"
+                                      VerticalAlignment="Center" />
+                                </Border>
+                            </DockPanel>
+                        </StackPanel>
+                    </Grid>
+                    <!--Asosiy qism-->
+                    <TextBlock Text="1983-2016 Apple Inc. All Rights Reserved. Licence and Warranty"
+                           HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                           Foreground="Silver" FontWeight="Bold"/>
+
+                </Grid>
+            </Border>
+        </Grid>
+    </Border>
+</Window>
